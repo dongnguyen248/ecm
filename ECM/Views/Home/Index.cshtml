@@ -2,30 +2,719 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+<div class="areaL">
+    <div class="ecmreset">
+        <p>Reset ECM</p>
+
+        <a href="#" class="btnreset"></a>
+
+
+    </div>
+    <div class="Boxlayout">
+        <ul id="tabs">
+
+            <li><a id="tab1">Shortcut</a></li>
+            <li><a id="tab2">Content Box</a></li>
+
+
+        </ul>
+        <div class="tab_on" id="tab1C">
+            <ul>
+                <li>
+                    <a href="#">My content</a>
+                </li>
+                <li>
+                    <a href="#">Favorites</a>
+                </li>
+                <li>
+                    <a href="#">Important Content</a>
+                </li>
+                <li>
+                    <a href="#">Contents shared</a>
+                </li>
+                <li>
+                    <a href="#">My Department</a>
+                </li>
+                <li>
+                    <a href="#">Trash Content</a>
+                </li>
+            </ul>
+        </div>
+        <div class="tab_on" id="tab2C">
+            <div class="select02">
+                <select>
+                    <option selected="selected" id="MenuDept">PoscoVST </option>
+                    <option class="noDept">Trash</option>
+                </select>
+                <div class="divselecttype">
+
+                </div>
+            </div>
+            <div class="mycontList">
+                <div class="treefdBox">
+                    <ol class="sidebar-menu1">
+                        <li class="treeview" id="rootFolder">
+                            <a href="#">
+                                <img src="~/Content/img/ico_folder_off.png" alt="Folder Image" />  Content 1
+                            </a>
+                            <ol class="treeview-menu">
+                                <li id="folder001"><a href="#"><img src="~/Content/img/ico_folder_off.png" alt="Folder Image" />  SubFolder</a></li>
+                                <li id="folder002">
+                                    <a href="#"><img src="~/Content/img/ico_folder_off.png" alt="Folder Image" />  Level One</a>
+                                    <ul class="treeview-menu">
+                                        <li id="folder004"><a><img src="~/Content/img/ico_folder_off.png" alt="Folder Image" />  Level Two</a></li>
+                                        <li>
+                                            <a href="#"><img src="~/Content/img/ico_folder_off.png" alt="Folder Image" />  Level Two </a>
+                                            <ul class="treeview-menu">
+                                                <li id="folder005"><a href="#"><img src="~/Content/img/ico_folder_off.png" alt="Folder Image" />  Level Three</a></li>
+                                                <li id="folder006"><a href="#"><img src="~/Content/img/ico_folder_off.png" alt="Folder Image" />  Level Three</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li id="folder003"><a href="#"><img src="~/Content/img/ico_folder_off.png" alt="Folder Image" /> Level One</a></li>
+                            </ol>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <img src="~/Content/img/ico_folder_off.png" alt="Folder Image" />Content 1
+
+                            </a>
+                            <ol class="treeview-menu">
+                                <li><a href="#"><img src="~/Content/img/ico_folder_off.png" alt="Folder Image" /> Level One</a></li>
+                                <li>
+                                    <a href="#"><img src="~/Content/img/ico_folder_off.png" alt="Folder Image" /> Level One</a>
+                                    <ul class="treeview-menu">
+                                        <li><a href="#"><img src="~/Content/img/ico_folder_off.png" alt="Folder Image" /> Level Two</a></li>
+                                        <li>
+                                            <a href="#"><img src="~/Content/img/ico_folder_off.png" alt="Folder Image" /> Level Two</a>
+                                            <ul class="treeview-menu">
+                                                <li><a href="#"><img src="~/Content/img/ico_folder_off.png" alt="Folder Image" /> Level Three</a></li>
+                                                <li><a href="#"><img src="~/Content/img/ico_folder_off.png" alt="Folder Image" /> Level Three</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="#"><img src="~/Content/img/ico_folder_off.png" alt="Folder Image" /> Level One</a></li>
+                            </ol>
+                        </li>
+
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+<div class="areaC">
+    <a href="#" class="btn_area" id="btn_area">  <img src="~/Content/img/btn_areaL.png" /></a>
+    <div class="areacBox">
+        <div class="treeFolder">
+            <div class="baseFolder">
+                <div class="txt">
+                    <p>Shortcut Box > My Content</p>
+                </div>
+            </div>
+        </div>
+        <div class="listContent">
+            <div class="left">
+                <div class="bt_resign">
+                    <a href="#" onclick="addnew()" class="btn_add">
+                        <span class="add_new"> Add New</span>
+                    </a>
+                    <a href="#" onclick="createnew()" class="btn_create">
+                        <span class="create_new">Create New</span>
+                    </a>
+                </div>
+            </div>
+            <div class="right">
+                <div class="listSearch">
+                    <input type="text" placeholder="Content name/owner/search ..." name="name" />
+                    <input type="image" class="btnListSearch" src="~/Content/img/btn_search.gif" />
+                </div>
+            </div>
+        </div>
+        <ul class="listicon">
+            <li><a href="#"><img src="~/Content/img/ico_all_on.png" alt="All File" /></a> </li>
+            <li><a href="#"><img src="~/Content/img/ico_ppt_on.png" alt="PPT File" /></a> </li>
+            <li><a href="#"><img src="~/Content/img/ico_xlsx_on.png" alt="XLSX File" /></a> </li>
+            <li><a href="#"><img src="~/Content/img/ico_doc_on.png" alt="DOC File" /></a> </li>
+            <li><a href="#"><img src="~/Content/img/ico_pdf_on.png" alt="PDF File" /></a> </li>
+            <li><a href="#"><img src="~/Content/img/ico_img_on.png" alt="IMG File" /></a> </li>
+        </ul>
+        <div class="contentList">
+            <table id="tbMainDefault" class="table  table-striped table-bordered post-list-table">
+                <thead>
+
+                    <tr class="tbheader" style="background-color:rgba(223, 225, 228, 1)">
+                       
+                        <th class="text-center" <span>File name</span></th>
+                        <th>owner</th>
+                        <th>Modifier</th>
+                        <th>Size</th>
+                        <th>Security level</th>
+                        <th>Version</th>
+                        <th>Modified date</th>
+
+                    </tr>
+                </thead>
+                <tbody class="tbbody">
+                    <tr>
+                        <td class="contentBox">
+                            <div class="contentTitle">
+                                <input type="checkbox" name="name" value="" />
+                                <a class="addfavorite" onclick="AddFavorite(this)"><img src="~/Content/img/ico_fav.png" alt="icon_start" /></a>
+                                <a onclick="ChangeFile(this)" onload="checkFileName()" class="contentname">aaaaaaaa</a>
+                            </div>
+
+                        </td>
+                        <td><p>bbbbbbbbbbbb</p></td>
+                        <td><p>cccccccccccccccc</p></td>
+                        <td><p>dddd</p></td>
+                        <td><p>eee</p></td>
+                        <td><p>ggg</p></td>
+                        <td><p>sss</p></td>
+                    </tr>
+                    <tr>
+                        <td class="contentBox">
+                            <div class="contentTitle">
+                                <input type="checkbox" name="name" value="" />
+                                <a class="addfavorite" onclick="AddFavorite(this)"><img src="~/Content/img/ico_fav.png" alt="icon_start" /></a>
+                                <a onclick="ChangeFile(this)" onload="checkFileName()" class="contentname">bbbbbb.xls</a>
+                            </div>
+
+                        </td>
+                        <td><p>bbbbbbbbbbbb</p></td>
+                        <td><p>cccccccccccccccc</p></td>
+                        <td><p>dddd</p></td>
+                        <td><p>eee</p></td>
+                        <td><p>ggg</p></td>
+                        <td><p>sss</p></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+
+</div>
+
+@* modal create *@
+<div class="modal fade" id="addnew" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title" id="exampleModalLabel">
+                    Registry Contents
+                </h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">X</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <div class="popSubtitle1">
+                    <span class="subtitle">
+                        Contents List
+                    </span>
+                    <div class="fileupload" id="fileupload">
+                        <label class="floatR btn btn-default">
+                            <b>+</b><span> Add Contents</span>
+                        </label>
+
+                    </div>
+                    <span id="inputhidden"></span>
+
+
+                </div>
+                <div class="listFileImport">
+                    <ul class="list"></ul>
+                </div>
+                <div class="popSubtitle2">
+                    <div class="headersub2">
+                        <div class="lefsub2">
+                            <span class="subtitle2">
+                                Save Location
+                            </span>
+                            <label class="chktype">
+                                <input type="checkbox" id="chktype" name="name" value="" />
+                                Add Favorites
+                            </label>
+                        </div>
+                        <span class="btnR btn btn-default">
+                            <a href="#">Select Folder TIP</a>
+                        </span>
+                    </div>
+                    <div class="selectFolder">
+                        <div class="allForder">
+                            <input class="form-control folderPath" readonly type="text" name="name" value="PoscoVST" />
+
+                            <a href="#" class="btn btn-default btn-sm" id="showAllFolder">All Content</a>
+                            <div class="listFolder" style="display:none">
+                                <div class="contentSelect">
+                                    <em>Content box selection</em>
+                                    <select>
+                                        <option value="value" selected>PoscoVST</option>
+                                    </select>
+                                </div>
+                                <ul class="sidebar-menu">
+                                    <li class="treeview" id="rootFolder1">
+                                        <a href="#">
+                                            <img src="~/Content/img/ico_folder_off.png" alt="Folder Image" />
+                                            Content1
+                                        </a>
+                                        <ul class="treeview-menu">
+                                            <li id="folder001"><a href="#"><img src="~/Content/img/ico_folder_off.png" alt="Folder Image" />  SubFolder</a></li>
+                                            <li id="folder002">
+                                                <a href="#"><img src="~/Content/img/ico_folder_off.png" alt="Folder Image" />  Level One</a>
+
+                                                <ul class="treeview-menu">
+                                                    <li id="folder004"><a><img src="~/Content/img/ico_folder_off.png" alt="Folder Image" />  Level Two</a></li>
+                                                    <li>
+                                                        <a href="#"><img src="~/Content/img/ico_folder_off.png" alt="Folder Image" />  Level Two </a>
+                                                        <ul class="treeview-menu">
+                                                            <li id="folder005"><a href="#"><img src="~/Content/img/ico_folder_off.png" alt="Folder Image" />  Level Three</a></li>
+                                                            <li id="folder006"><a href="#"><img src="~/Content/img/ico_folder_off.png" alt="Folder Image" />  Level Three</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li id="folder003"><a href="#"><img src="~/Content/img/ico_folder_off.png" alt="Folder Image" /> Level One</a></li>
+                                        </ul>
+                                    </li>
+                                    <li id="rootFolder2" class="treeview">
+                                        <a href="#">
+                                            <img src="~/Content/img/ico_folder_off.png" alt="Folder Image" />
+                                            Content2
+                                        </a>
+                                        <ul class="treeview-menu">
+                                            <li><a href="#"><img src="~/Content/img/ico_folder_off.png" alt="Folder Image" /> Level One</a></li>
+                                            <li>
+                                                <a href="#"><img src="~/Content/img/ico_folder_off.png" alt="Folder Image" /> Level One</a>
+                                                <ul class="treeview-menu">
+                                                    <li><a href="#"><img src="~/Content/img/ico_folder_off.png" alt="Folder Image" /> Level Two</a></li>
+                                                    <li>
+                                                        <a href="#"><img src="~/Content/img/ico_folder_off.png" alt="Folder Image" /> Level Two</a>
+                                                        <ul class="treeview-menu">
+                                                            <li><a href="#"><img src="~/Content/img/ico_folder_off.png" alt="Folder Image" /> Level Three</a></li>
+                                                            <li><a href="#"><img src="~/Content/img/ico_folder_off.png" alt="Folder Image" /> Level Three</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#"><img src="~/Content/img/ico_folder_off.png" alt="Folder Image" /> Level One</a></li>
+                                        </ul>
+                                    </li>
+
+                                </ul>
+
+                            </div>
+                        </div>
+
+                        <div class="searchFolder">
+                            <input type="search" class="searchF" name="name" value="" />
+                            <input type="image" class="imgSearch" name="name" src="~/Content/img/btn_search.gif" />
+
+                        </div>
+                    </div>
+                </div>
+                <div class="popSubtitle3">
+                    <div class="Security">
+                        <div class="headerSecurity">
+                            <span>
+                                Security grade
+                            </span>
+                            <span class="btn btn-default btnR "> <a href="#"> Shared scope TIP</a> </span>
+                        </div>
+                        <div class="bodySercurity">
+                            <div class="share_set">
+                                <ol>
+                                    <li class="grade1">
+                                        Specific employee sharing
+                                    </li>
+                                    <li class="grade2">
+                                        Department employee sharing
+                                    </li>
+                                    <li class="grade3">
+                                        Specific employee sharing
+                                    </li>
+                                    <li class="grade4">
+                                        All employee sharing
+                                    </li>
+
+                                </ol>
+                            </div>
+                            <div class="safe_btn_box">
+                                <a href="#" onclick="selectSercu('1A','F')">
+                                    Secret
+                                </a>
+                                <a href="#" onclick="selectSercu('2A','F')">
+                                    Secret A
+                                </a>
+                                <a href="#" onclick="selectSercu('2A','T')">
+                                    Secret A/Not Open
+                                </a>
+                                <a href="#" onclick="selectSercu('2B','F')">
+                                    Secret B/Not Open
+
+                                </a>
+                                <a href="#" onclick="selectSercu('2A','T')">
+                                    Secret B
+                                </a>
+                                <a href="#" onclick="selectSercu('3A','T')">
+                                    Public
+                                </a>
+
+
+
+                            </div>
+                            <div class="tagSecurity">
+                                <span class="tag_1">TAG</span>
+                                <span class="tag_2">(Up to 20 characters per tag, maximum 10 can be registered)</span>
+                                <div class="input_hashtag">
+                                    <input type="text" name="name" value="#" />
+
+                                </div>
+                            </div>
+                            <div class="permission">
+                                <div class="titlePermission">
+                                    <span>Permission Setting</span>
+                                </div>
+                                <div class="positionBox">
+                                    <div class="positionSearch">
+                                        <div class="bodyPermistion">
+                                            <div class="PartL">
+                                                <table class="firtL">
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>
+                                                                Owner
+                                                            </th>
+                                                            <td class="account01">
+                                                                Hwangmangi(IT)
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <div class="secondL">
+                                                    <ul id="tabs2">
+                                                        <li> <a id="tab3" href="#" class="subsecondL">Name</a> </li>
+                                                        <li> <a id="tab4" href="#" class="subsecondL">Organization</a> </li>
+                                                        <li>
+                                                            <a id="tab5" href="#" class="subsecondL">Mail address</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="tabcontent" id="tab3C">
+                                                    <input type="text" name="name" value="" />
+                                                    <a href="#">
+                                                        <img src="~/Content/img/btn_search.gif" alt="search img" />
+                                                    </a>
+
+                                                    <div class="count_box">
+                                                        <div class="allCheck">
+                                                            <span>
+                                                                <label class="i_check" for="listAllcheck">
+                                                                    <input class="checkbox_1" type="checkbox" name="checkbox" id="listAllcheck" value="" />
+                                                                </label>
+                                                            </span>
+                                                            <p class="select_checkbox">Select All </p>
+                                                            <a href="#" onclick="deleteAllSelect('userList')" class="deleteAll1 btn btn-default">Delete All</a>
+                                                        </div>
+                                                        <div class="maxH">
+                                                            <table class="normalTb">
+                                                                <tbody id="userList">
+                                                                    <tr class="">
+                                                                        <td>
+                                                                            <input type="checkbox" name="name" value="" id="chk001" onchange="addnewclass('chk001')" />
+                                                                            <span>nguyen van A</span>
+
+                                                                        </td>
+                                                                    </tr>
+
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="checkbox" name="name" value="" id="chk002" onchange="addnewclass('chk002')" />
+                                                                            <span>nguyen van B</span>
+
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="checkbox" name="name" value="" id="chk003" onchange="addnewclass('chk003')" />
+                                                                            <span>nguyen van c</span>
+
+                                                                        </td>
+                                                                    </tr>
+
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tabcontent" id="tab4C">
+                                                    <input type="text" name="name" value="" />
+                                                    <a href="#">
+                                                        <img src="~/Content/img/btn_search.gif" alt="search img" />
+                                                    </a>
+                                                    <div class="count_box">
+                                                        <div class="maxH">
+                                                            <table class="normalTb">
+                                                                <tbody id="deptList"></tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="tabcontent" id="tab5C">
+                                                <div class="count_box">
+                                                    <div class="maxH">
+                                                        <table class="normalTb">
+                                                            <tbody id="mailList"></tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="PartC">
+                                            <p class="btn_move">
+                                                <a href="#" onclick="moveToRight('bodysub1')" class="btn_move_W_add">
+                                                    <img src="~/Content/img/btn_personR.png" alt="Alternate Text" />
+                                                </a>
+                                                <a href="#" onclick="moveToLeft('bodysub1')" class="btn_move_W_add">
+                                                    <img src="~/Content/img/btn_personL.png" alt="Alternate Text" />
+                                                </a>
+                                            </p>
+                                            <p class="btn_move">
+                                                <a href="#" onclick="moveToRight('bodysub2')" class="btn_move_W_add">
+                                                    <img src="~/Content/img/btn_personR.png" alt="Alternate Text" />
+                                                </a>
+                                                <a href="#" onclick="moveToLeft('bodysub2')" class="btn_move_W_add">
+                                                    <img src="~/Content/img/btn_personL.png" alt="Alternate Text" />
+                                                </a>
+                                            </p>
+                                            <p class="btn_move">
+                                                <a href="#" onclick="moveToRight('bodysub3')" class="btn_move_W_add">
+                                                    <img src="~/Content/img/btn_personR.png" alt="Alternate Text" />
+                                                </a>
+                                                <a href="#" onclick="moveToLeft('bodysub3')" class="btn_move_W_add">
+                                                    <img src="~/Content/img/btn_personL.png" alt="Alternate Text" />
+                                                </a>
+                                            </p>
+                                        </div>
+                                        <div class="PartR">
+                                            <div class="sub1">
+                                                <div class="subheader">
+                                                    <p> Edit/Copy/Read/Print</p>
+                                                    <span class="helpsub1">
+                                                        <a> <img src="~/Content/img/ico_help.png" alt="help Text" /></a>
+                                                    </span>
+                                                    <span>
+                                                        <a onclick="deleteAllSelect('bodysub1')" class="btn btn-default delselectsub1">Delete All</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="bodysub1" id="bodysub1">
+                                                <table>
+                                                    <tr>
+                                                        <td></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="sub2">
+                                                <a onclick="moveToDown('bodysub1', 'bodysub2')"><img src="~/Content/img/btn_personD.png" alt="Alternate Text" /></a>
+                                                <a onclick="moveToUp('bodysub2', 'bodysub1')"> <img src="~/Content/img/btn_personU.png" alt="Alternate Text" /></a>
+                                            </div>
+                                            <div class="sub1">
+                                                <div class="subheader">
+                                                    <p class="header2">Copy/Read/Print</p>
+                                                    <span class="helpsub1">
+                                                        <a href=""> <img src="~/Content/img/ico_help.png" alt="help Text" /></a>
+                                                    </span>
+                                                    <span>
+                                                        <a onclick="deleteAllSelect('bodysub2')" class="btn btn-default delselectsub1">Delete All</a>
+                                                    </span>
+                                                </div>
+
+                                            </div>
+                                            <div class="bodysub1" id="bodysub2">
+                                                <table>
+                                                    <tr>
+                                                        <td></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="sub4">
+                                                <a onclick="moveToDown('bodysub2','bodysub3')"> <img src="~/Content/img/btn_personD.png" alt="Alternate Text" /></a>
+                                                <a onclick="moveToUp('bodysub3','bodysub2')"><img src="~/Content/img/btn_personU.png" alt="Alternate Text" /></a>
+
+                                            </div>
+                                            <div class="sub1">
+                                                <div class="subheader">
+                                                    <p class="header3">Read/Print</p>
+                                                    <span class="helpsub1">
+                                                        <a href=""> <img src="~/Content/img/ico_help.png" alt="help Text" /></a>
+                                                    </span>
+                                                    <span>
+                                                        <a class="btn btn-default delselectsub1" onclick="deleteAllSelect('bodysub3')">Delete All</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="bodysub1" id="bodysub3">
+                                                <table>
+                                                    <tr>
+                                                        <td></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+                <center>
+                    <button type="button" class="btn btn-primary">Register</button>
+                </center>
+            </div>
+        </div>
     </div>
 </div>
+
+
+@* modal create new *@
+<div class="modal fade" id="createnew" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title" id="exampleModalLabel">Content Creation</h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">x</span>
+                </button>
+            </div>
+            <div class="body-modal">
+                <div class="nameNewContent">
+                    <span>Name Content</span>
+                    <input class="form-control" type="text" name="name" value="" />
+                </div>
+                <div class="locationContent">
+                    <span>Location Content</span>
+                    <input class="form-control folderPath" readonly type="text" name="name" value="PoscoVST" />
+                    <a href="#" class="btn btn-default" id="showFolder">All Content</a>
+                </div>
+            </div>
+
+            <div class="allForder">
+                <div class="listFolder1" style="display:none">
+                    <div class="contentSelect">
+                        <em>Content box selection</em>
+                        <select>
+                            <option value="value" selected>PoscoVST</option>
+                        </select>
+                    </div>
+                    <ul class="sidebar-menu">
+                        <li class="treeview" id="rootFolder1">
+                            <a href="#">
+                                <img src="~/Content/img/ico_folder_off.png" alt="Folder Image" />
+                                Content1
+                            </a>
+                            <ul class="treeview-menu">
+                                <li id="folder001"><a href="#"><img src="~/Content/img/ico_folder_off.png" alt="Folder Image" />  SubFolder</a></li>
+                                <li id="folder002">
+                                    <a href="#"><img src="~/Content/img/ico_folder_off.png" alt="Folder Image" />  Level One</a>
+
+                                    <ul class="treeview-menu">
+                                        <li id="folder004"><a><img src="~/Content/img/ico_folder_off.png" alt="Folder Image" />  Level Two</a></li>
+                                        <li>
+                                            <a href="#"><img src="~/Content/img/ico_folder_off.png" alt="Folder Image" />  Level Two </a>
+                                            <ul class="treeview-menu">
+                                                <li id="folder005"><a href="#"><img src="~/Content/img/ico_folder_off.png" alt="Folder Image" />  Level Three</a></li>
+                                                <li id="folder006"><a href="#"><img src="~/Content/img/ico_folder_off.png" alt="Folder Image" />  Level Three</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li id="folder003"><a href="#"><img src="~/Content/img/ico_folder_off.png" alt="Folder Image" /> Level One</a></li>
+                            </ul>
+                        </li>
+                        <li id="rootFolder2" class="treeview">
+                            <a href="#">
+                                <img src="~/Content/img/ico_folder_off.png" alt="Folder Image" />
+                                Content2
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="#"><img src="~/Content/img/ico_folder_off.png" alt="Folder Image" /> Level One</a></li>
+                                <li>
+                                    <a href="#"><img src="~/Content/img/ico_folder_off.png" alt="Folder Image" /> Level One</a>
+                                    <ul class="treeview-menu">
+                                        <li><a href="#"><img src="~/Content/img/ico_folder_off.png" alt="Folder Image" /> Level Two</a></li>
+                                        <li>
+                                            <a href="#"><img src="~/Content/img/ico_folder_off.png" alt="Folder Image" /> Level Two</a>
+                                            <ul class="treeview-menu">
+                                                <li><a href="#"><img src="~/Content/img/ico_folder_off.png" alt="Folder Image" /> Level Three</a></li>
+                                                <li><a href="#"><img src="~/Content/img/ico_folder_off.png" alt="Folder Image" /> Level Three</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="#"><img src="~/Content/img/ico_folder_off.png" alt="Folder Image" /> Level One</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <center>
+                    <button type="button" class="btn btn-primary">Create Content</button>
+                </center>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*modal change file*@
+<div class="modal fade modalchangefile" id="changefile" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title" id="exampleModalLabel">Open Content</h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">x</span>
+                </button>
+            </div>
+            <div class="body-modal">
+                <div class="nameNewContent">
+                    <span>Name Content</span>
+                    <input id="nameContent" class="form-control" type="text" name="name" value="" />
+                </div>
+            </div>
+
+
+
+            <div class="modal-footer">
+                <center>
+                    <button type="button" class="btn btn-primary">View</button>
+                    <button type="button" class="btn btn-primary">Edit</button>
+                </center>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+<script src="~/Scripts/jquery.dataTables.min.js"></script>
+<script src="~/Scripts/sitejs/areaL.js"></script>
