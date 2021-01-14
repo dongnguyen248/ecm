@@ -166,17 +166,28 @@ $('.sidebar-menu li').on('click', function (e) {
     $(this).toggleClass('active');
     if ($(this).hasClass('active')) {
         $(this).children().children().attr('src', '/Content/img/ico_folder_on.png');
-        $('<span onclick=selectFolder(this) class="btnMove" id="btnGetPath" >Select <i class="fas fa-angle-right"></i></span>').insertAfter($(this).children('a'))
+        $('<span onclick=selectFolder(this,"#folderPath",".sidebar-menu") class="btnMove" id="btnGetPath" >Select <i class="fas fa-angle-right"></i></span>').insertAfter($(this).children('a'))
 
     } else {
         $(this).children().children().attr('src', '/Content/img/ico_folder_off.png');
         $(this).children('span').remove();
 
     }
-
-
 });
+$('.sidebar-menu2 li').on('click', function (e) {
+    e.stopPropagation();
+    $('.sidebar-menu2').find('span').remove();
+    $(this).toggleClass('active');
+    if ($(this).hasClass('active')) {
+        $(this).children().children().attr('src', '/Content/img/ico_folder_on.png');
+        $('<span onclick=selectFolder(this,"#folderPath1",".sidebar-menu2") class="btnMove" id="btnGetPath" >Select <i class="fas fa-angle-right"></i></span>').insertAfter($(this).children('a'))
 
+    } else {
+        $(this).children().children().attr('src', '/Content/img/ico_folder_off.png');
+        $(this).children('span').remove();
+
+    }
+});
 
 $('.sidebar-menu1 li').on('click', function (e) {
     e.stopPropagation();
@@ -210,9 +221,12 @@ function dfs(elem, destinationClass) {
     return text;
 }
 
-function selectFolder(obj) {
-    var temp = dfs($(".sidebar-menu"), $(obj).attr("id"));
-    $('.folderPath').val(temp.slice(0, -1));
+function selectFolder(obj, id, clas) {
+    console.log(id);
+    console.log(clas);
+
+    var temp = dfs($(clas), $(obj).attr("id"));
+    $(id).val(temp.slice(0, -1));
     text = "PoscoVST>";
 
 }
@@ -331,6 +345,3 @@ function AddFavorite(id) {
     $(img).attr('src', src);
 
 }
-$('a').click(function (e) {
-    console.log(e.target);
-})

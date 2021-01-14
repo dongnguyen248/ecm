@@ -148,7 +148,7 @@
                 <thead>
 
                     <tr class="tbheader" style="background-color:rgba(223, 225, 228, 1)">
-                       
+
                         <th class="text-center" <span>File name</span></th>
                         <th>owner</th>
                         <th>Modifier</th>
@@ -247,7 +247,7 @@
                     </div>
                     <div class="selectFolder">
                         <div class="allForder">
-                            <input class="form-control folderPath" readonly type="text" name="name" value="PoscoVST" />
+                            <input class="form-control" id="folderPath" readonly type="text" name="name" value="PoscoVST" />
 
                             <a href="#" class="btn btn-default btn-sm" id="showAllFolder">All Content</a>
                             <div class="listFolder" style="display:none">
@@ -609,7 +609,7 @@
                 </div>
                 <div class="locationContent">
                     <span>Location Content</span>
-                    <input class="form-control folderPath" readonly type="text" name="name" value="PoscoVST" />
+                    <input class="form-control" id="folderPath1" readonly type="text" name="name" value="PoscoVST" />
                     <a href="#" class="btn btn-default" id="showFolder">All Content</a>
                 </div>
             </div>
@@ -622,7 +622,7 @@
                             <option value="value" selected>PoscoVST</option>
                         </select>
                     </div>
-                    <ul class="sidebar-menu">
+                    <ul class="sidebar-menu2">
                         <li class="treeview" id="rootFolder1">
                             <a href="#">
                                 <img src="~/Content/img/ico_folder_off.png" alt="Folder Image" />
@@ -702,9 +702,6 @@
                     <input id="nameContent" class="form-control" type="text" name="name" value="" />
                 </div>
             </div>
-
-
-
             <div class="modal-footer">
                 <center>
                     <button type="button" class="btn btn-primary">View</button>
