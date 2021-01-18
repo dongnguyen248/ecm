@@ -82,6 +82,8 @@
         $(this).css('background-image', 'url(' + backgroundIcon + ')');
 
     });
+
+    //console.log($('.checkbox iput[checked]'));
 });
 
 
@@ -345,3 +347,15 @@ function AddFavorite(id) {
     $(img).attr('src', src);
 
 }
+function AddImportant() {
+    if (!$('.important').hasClass('backgroundImp')) {
+        $('.important').addClass('backgroundImp');
+    } else {
+        $('.important').removeClass('backgroundImp');
+    }
+}
+$('.checkbox').click(function (e) {
+    e.stopPropagation();
+
+console.log(e)
+});

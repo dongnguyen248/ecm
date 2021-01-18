@@ -27,7 +27,7 @@
                     <a href="#">Favorites</a>
                 </li>
                 <li>
-                    <a href="#">Important Content</a>
+                    <a href="#"> <i class="fas fa-info importantside"></i> Important Content</a>
                 </li>
                 <li>
                     <a href="#">Contents shared</a>
@@ -163,7 +163,13 @@
                     <tr>
                         <td class="contentBox">
                             <div class="contentTitle">
-                                <input type="checkbox" name="name" value="" />
+                                <div class="checkbox">
+                                    <label >
+                                        <input type="checkbox" value="">
+                                        <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                    </label>
+                                </div>
+                                <a class="important" onclick="AddImportant()"><i class="fas fa-info"></i></a>
                                 <a class="addfavorite" onclick="AddFavorite(this)"><img src="~/Content/img/ico_fav.png" alt="icon_start" /></a>
                                 <a onclick="ChangeFile(this)" onload="checkFileName()" class="contentname">aaaaaaaa</a>
                             </div>
@@ -179,7 +185,12 @@
                     <tr>
                         <td class="contentBox">
                             <div class="contentTitle">
-                                <input type="checkbox" name="name" value="" />
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="">
+                                        <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                    </label>
+                                </div>
                                 <a class="addfavorite" onclick="AddFavorite(this)"><img src="~/Content/img/ico_fav.png" alt="icon_start" /></a>
                                 <a onclick="ChangeFile(this)" onload="checkFileName()" class="contentname">bbbbbb.xls</a>
                             </div>
